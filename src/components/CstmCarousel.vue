@@ -8,6 +8,7 @@
             class="cstm-cta-tool"
             style="background-color: white; color: #40e2e8"
             label="월 100만원"
+            padding="none"
           />
         </div>
         <q-card class="swiper-card">
@@ -71,6 +72,7 @@
             class="cstm-cta-tool"
             style="background-color: white; color: #40e2e8"
             label="월 100만원"
+            padding="none"
           />
         </div>
         <q-card class="swiper-card">
@@ -135,6 +137,7 @@
             class="cstm-cta-tool"
             style="background-color: white; color: #40e2e8"
             label="월 100만원"
+            padding="none"
           />
         </div>
         <q-card class="swiper-card">
@@ -199,6 +202,7 @@
             class="cstm-cta-tool"
             style="background-color: white; color: #40e2e8"
             label="월 100만원"
+            padding="none"
           />
         </div>
         <q-card class="swiper-card">
@@ -263,6 +267,7 @@
             class="cstm-cta-tool"
             style="background-color: white; color: #40e2e8"
             label="월 100만원"
+            padding="none"
           />
         </div>
         <q-card class="swiper-card">
@@ -327,6 +332,7 @@
             class="cstm-cta-tool"
             style="background-color: white; color: #40e2e8"
             label="월 100만원"
+            padding="none"
           />
         </div>
         <q-card class="swiper-card">
@@ -391,6 +397,7 @@
             class="cstm-cta-tool"
             style="background-color: white; color: #40e2e8"
             label="월 100만원"
+            padding="none"
           />
         </div>
         <q-card class="swiper-card">
@@ -455,6 +462,7 @@
             class="cstm-cta-tool"
             style="background-color: white; color: #40e2e8"
             label="월 100만원"
+            padding="none"
           />
         </div>
         <q-card class="swiper-card">
@@ -519,6 +527,7 @@
             class="cstm-cta-tool"
             style="background-color: white; color: #40e2e8"
             label="월 100만원"
+            padding="none"
           />
         </div>
         <q-card class="swiper-card">
@@ -641,6 +650,19 @@ export default {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        on: {
+          slideChange: function () {
+            const activeSlide = document.querySelector(".swiper-slide-active");
+            const tooltips = activeSlide.querySelectorAll(".tooltips-fly");
+            tooltips.forEach((tooltip) => {
+              tooltip.classList.add("fadeInAnimation");
+              setTimeout(() => {
+                tooltip.classList.remove("fadeInAnimation");
+              }, 500);
+            });
+            console.log("Swiper slide active:", this.activeIndex);
+          },
+        },
       });
     },
   },
@@ -718,5 +740,17 @@ export default {
 
 .swiper-slide.swiper-slide-visible.swiper-slide-next {
   right: 31%;
+}
+.fadeInAnimation {
+  animation: fadeIn 500ms ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>
