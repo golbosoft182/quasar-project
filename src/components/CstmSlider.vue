@@ -1,5 +1,9 @@
 <template>
-  <div class="slider" @mousedown="handleMouseDown" @mouseup="handleMouseUp">
+  <div
+    class="slider desktop-only"
+    @mousedown="handleMouseDown"
+    @mouseup="handleMouseUp"
+  >
     <div
       class="item-container"
       :style="{ transform: `translateX(-${currentIndex * itemWidth}px)` }"
@@ -26,12 +30,31 @@
       </transition-group>
     </div>
   </div>
+  <div class="checklist-cstm mobile-only">
+    <div class="q-pa-md">
+      <div class="q-gutter-sm">
+        <q-checkbox v-model="teal" label="한국어 능력" color="white" />
+        <q-checkbox v-model="teal" label="업무 수행 능력" color="white" />
+      </div>
+      <div class="q-gutter-sm">
+        <q-checkbox v-model="teal" label="겸업 여부" color="white" />
+        <q-checkbox v-model="teal" label="평판 조회" color="white" />
+      </div>
+      <div class="q-gutter-sm link-slider-cstm">
+        <p>
+          <a href="javascript:;">개발자가 필요하신가요?</a>
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import { ref } from "vue";
 export default {
   data() {
     return {
+      teal: ref(true),
       currentIndex: 0,
       itemWidth: 100, // Adjust according to your item width
       slideInterval: null,
@@ -131,5 +154,21 @@ export default {
 }
 .cstm-btn-features img {
   margin-right: 15px;
+}
+.checklist-cstm {
+  font-size: 16px;
+  font-weight: 900;
+  color: #ffffff;
+}
+.q-checkbox__svg {
+  color: #2c599b !important;
+}
+.link-slider-cstm {
+  margin: 10px 0 30px;
+}
+.link-slider-cstm,
+.link-slider-cstm a {
+  color: #fbff23;
+  font-size: 16px;
 }
 </style>

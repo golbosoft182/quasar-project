@@ -1,5 +1,6 @@
 <template>
   <div class="animation">
+    <p>&nbsp;</p>
     <div
       class="animation-head"
       id="animate-one"
@@ -34,7 +35,7 @@
       <p><span>개발자가 필요하신가요?</span></p>
     </div>
     <div
-      class="box-features"
+      class="box-features desktop-only"
       id="animate-four"
       :class="{ 'animate-fade-in': showAnimateFour }"
     >

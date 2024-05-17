@@ -79,7 +79,7 @@ body.desktop .q-hoverable:hover .q-item__label {
   margin-bottom: 10px;
 }
 .cstm-bottom {
-  padding: 90px 0;
+  padding: 90px 0 0;
 }
 .tile-info a {
   text-decoration: none;
@@ -307,4 +307,55 @@ body.desktop .q-hoverable:hover .q-item__label {
 }
 .swiper-slide-active .tooltips-fly {
   display: block;
+}
+.copyright {
+  margin: 40px 0;
+}
+.copyright,
+.copyright p {
+  font-weight: 900;
+  font-size: 13px;
+  color: #5e626f;
+}
+@media screen and (max-width: 767px) {
+  .toolbar-cstm,
+  .inner-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .body.main {
+    padding: 55px 0 0;
+  }
+  .cstm-cta-two {
+    background: #8bc4ff !important;
+    color: #ffffff !important;
+  }
+  .cstm-cta-two::after {
+    border-color: #8bc4ff transparent transparent transparent;
+  }
+  .animation-headline,
+  .animation-headline h1 {
+    font-size: 36px;
+  }
+  .body.main br {
+    display: none;
+  }
+  .animation-subheadline,
+  .animation-subheadline p {
+    font-size: 17px;
+  }
+  .q-checkbox__svg {
+    color: #2c599b !important;
+  }
+  .cstm-bottom {
+    padding: 60px 0 0;
+  }
+  .footer-row {
+    margin-bottom: 30px;
+  }
+  .copyright {
+    margin: 0px;
+    position: relative;
+    top: -30px;
+  }
 }

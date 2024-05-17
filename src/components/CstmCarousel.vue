@@ -753,4 +753,41 @@ export default {
     opacity: 1;
   }
 }
+@media screen and (max-width: 767px) {
+  .swiper-slide {
+    width: 234px;
+    height: 311px;
+  }
+  .swiper-card {
+    font-size: 14px;
+  }
+  .swiper-card .heading-text {
+    font-size: 18px;
+  }
+  .swiper-card .cstm-btn {
+    font-size: 14px;
+  }
+  .swiper-slide.swiper-slide-visible.swiper-slide-prev {
+    left: 58%;
+  }
+
+  .swiper-slide.swiper-slide-visible.swiper-slide-next {
+    right: 58%;
+  }
+  .swiper-card .q-avatar {
+    font-size: 64px !important;
+  }
+  .cstm-badge-flag img {
+    bottom: -55px;
+    right: -3px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 65%;
+    transform: translateY(-50%);
+  }
+  .swiper {
+    padding-bottom: 0px;
+  }
+}
 </style>
