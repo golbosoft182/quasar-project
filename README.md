@@ -6,6 +6,10 @@ A Quasar Project
 
 https://hyperhire-test-eka-handi-kusuma.netlify.app/#/
 
+## Screenshot
+
+https://drive.google.com/file/d/1uqMFQFcEW1i1CA3O_F7WqScxCBNx02o-/view?usp=sharing
+
 ## Install the dependencies
 
 ```bash
